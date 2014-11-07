@@ -48,7 +48,8 @@ final class SqlSyncHandler{
 			$this -> serverAnswer['result'] = 'ERROR';
 		$this -> serverAnswer['message'] = $message;
 		$this -> serverAnswer['data'] = $serverData;
-		$this -> serverAnswer['syncDate'] = strtotime("now")*1000;	// return sync_date: "1372365079000",
+// 		$this -> serverAnswer['syncDate'] = strtotime("now")*1000;	// return sync_date: "1372365079000",
+		$this -> serverAnswer['syncDate'] = round(microtime(true) * 1000); // return sync_date: in milliseconds: 1000 times more unique
 		//echo $serverAnswer;
 		//echo json_encode("R");
 
