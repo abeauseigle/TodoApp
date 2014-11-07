@@ -27,7 +27,7 @@ I hope it will help you to create your own webSql app. You are welcome to improv
 
 ## Limitations:
 
- - On the table on Server the unique index MUST BE the first field, so you will have: 
+ - On the table on Server the unique SERVER index MUST BE the first field, and the client one ("id") MUST BE the second field so you will have:  
    "my_ID (int11),id (text),fieldA (whatever),fieldB (whatever),...,BDBid (char(13) ),last_sync_date (timestamp, on update CURRENT_TIMESTAMP, CURRENT_TIMESTAMP -OR- Datetime if you have already a timestamp column)
  - DELETE are not handled for now in the sync process (handle with a specific value in specific field lke 'Active'.
  - There is no error handling for the server side. You're welcome to help me for it.
