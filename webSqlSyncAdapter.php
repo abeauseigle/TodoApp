@@ -43,6 +43,17 @@ $password = "It's personnal";
 }
 
 function getServerData($clientLastSyncDate, $userUsagerID, $userOrganisationID, $userNiveauID, $strUname, $userRessourceID, $CLnum_rows, $BDBid){		//get the modified data from the server using an associative array
+/*field explanation in relation to the example:
+$clientLastSyncDate: MANDATORY, sync operations are based on this
+$userUsagerID: parameter example specific 
+$userOrganisationID: parameter example specific 
+$userNiveauID: parameter example specific 
+$strUname: parameter example specific 
+$userRessourceID: parameter example specific 
+$CLnum_rows: OPTIONAL, MANDATORY if LOGIN CHECK is required (=if authorisation is enabled)
+$BDBid: MANDATORY, it pass the single client unique identifier
+*/
+
 
 	// Define here the tables to sync Server side param1 is the webSql table name and param2 is the MySQL table name
 	// To try: I think that the colomn tableName_MySql is useless
