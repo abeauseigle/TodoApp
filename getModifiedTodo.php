@@ -53,8 +53,10 @@ if ($CLnum_rows){
 
 	$sql_result = array();
 	$sql = mysql_query($query);
-	while($row = mysql_fetch_object($sql)){
-		$sql_result[] = $row;
+	if (mysql_num_rows($sql)>0) { //lp 20141024: to avoid error in case of empty table
+		while($row = mysql_fetch_object($sql)){
+			$sql_result[] = $row;
+		}
 	}
 	//print_r ($sql_result);
 	return $sql_result;
